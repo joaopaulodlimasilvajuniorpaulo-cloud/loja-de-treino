@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio Full Stack em formato de loja virtual: projetos, habilidades e serviços apresentados como produtos criativos.">
+  <meta name="theme-color" content="#111827">
+  <meta property="og:title" content="DevStore | Portfólio Full Stack">
+  <meta property="og:description" content="Uma vitrine criativa de projetos, habilidades e serviços de desenvolvimento Full Stack.">
+  <meta property="og:type" content="website">
+  <title>DevStore | Portfólio Full Stack</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111827'/%3E%3Cpath d='M18 24h28l-3 20H21L18 24Z' fill='%2300f5d4'/%3E%3Cpath d='M24 24a8 8 0 0 1 16 0' fill='none' stroke='%23ff4ecd' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="preloader" id="preloader" aria-label="Carregando site">
+    <div class="loader-logo">Dev<span>Store</span></div>
+    <div class="loader-bar"><span></span></div>
+  </div>
+
+  <div class="custom-cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <header class="site-header" id="topo">
+    <a href="#hero" class="brand" aria-label="Ir para início">
+      <span class="brand-bag" aria-hidden="true"></span>
+      <span>Dev<span>Store</span></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+      <a href="#produtos">Produtos</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#sobre">Sobre a loja</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#checkout">Checkout</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema claro e escuro">
+        <span class="toggle-orb"></span>
+      </button>
+      <button class="sound-toggle" id="soundToggle" type="button" aria-label="Ativar ou silenciar sons">Som</button>
+      <a href="#checkout" class="cart-button" id="cartButton" aria-label="Abrir carrinho de interesses">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a2 2 0 1 0 .01 0H7Zm10 0a2 2 0 1 0 .01 0H17ZM6.2 6l.9 7.1A3 3 0 0 0 10 15.7h6.6a3 3 0 0 0 2.9-2.3L21 8H8.1L7.8 5.8A2 2 0 0 0 5.8 4H3v2h3.2Z"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">Loja virtual de soluções Full Stack</p>
+        <h1>Compre ideias digitais prontas para escalar.</h1>
+        <p class="hero-text">Aqui, cada “produto” é uma entrega real: interfaces, APIs, bancos de dados, automações e experiências web feitas sob medida.</p>
+        <div class="typing-line" aria-live="polite">Especialidade em <span id="typingText"></span><span class="caret">|</span></div>
+        <div class="hero-actions">
+          <a class="btn primary" href="#produtos">Explorar vitrine</a>
+          <a class="btn ghost" href="#checkout">Finalizar proposta</a>
+        </div>
+      </div>
+      <div class="hero-card reveal" data-delay="120">
+        <div class="receipt">
+          <div class="receipt-top">
+            <span>Pedido #404</span>
+            <span>Online</span>
+          </div>
+          <h2>Kit Full Stack</h2>
+          <ul>
+            <li><span>Frontend premium</span><strong>UI/UX</strong></li>
+            <li><span>API robusta</span><strong>REST</strong></li>
+            <li><span>Banco otimizado</span><strong>SQL</strong></li>
+            <li><span>Deploy confiável</span><strong>CI/CD</strong></li>
+          </ul>
+          <div class="receipt-total"><span>Total criativo</span><strong>∞ commits</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section products" id="produtos">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Vitrine de produtos</p>
+        <h2>Projetos embalados como soluções.</h2>
+        <p>Use estes cards como placeholders e troque nomes, imagens, links e descrições pelos seus projetos reais.</p>
+      </div>
+
+      <div class="filter-bar reveal" aria-label="Filtro de categorias">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        <button class="filter-btn" data-filter="devops">DevOps</button>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <!-- Cards renderizados pelo script.js. TROCAR: edite os projetos no array projects. -->
+      </div>
+    </section>
+
+    <section class="section skills" id="categorias">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Categorias da loja</p>
+        <h2>Prateleiras de habilidades.</h2>
+        <p>Cada categoria representa uma área de atuação com nível visual animado.</p>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card reveal">
+          <span>Frontend</span>
+          <h3>Interfaces de alta conversão</h3>
+          <div class="progress" data-progress="92"><span></span></div>
+        </article>
+        <article class="skill-card reveal">
+          <span>Backend</span>
+          <h3>APIs seguras e escaláveis</h3>
+          <div class="progress" data-progress="88"><span></span></div>
+        </article>
+        <article class="skill-card reveal">
+          <span>Banco de Dados</span>
+          <h3>Modelagem e performance</h3>
+          <div class="progress" data-progress="84"><span></span></div>
+        </article>
+        <article class="skill-card reveal">
+          <span>DevOps</span>
+          <h3>Deploy, automação e monitoramento</h3>
+          <div class="progress" data-progress="78"><span></span></div>
+        </article>
+      </div>
+      <div class="tech-badges reveal" aria-label="Tecnologias e selos de qualidade">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>APIs</span><span>SQL</span><span>Docker</span><span>Git</span>
+      </div>
+    </section>
+
+    <section class="section about" id="sobre">
+      <div class="about-panel reveal">
+        <p class="eyebrow">Sobre a loja</p>
+        <h2>Quem fabrica os produtos?</h2>
+        <p><!-- TROCAR: sua história real --> Sou um desenvolvedor Full Stack apaixonado por transformar problemas em produtos digitais úteis, bonitos e fáceis de manter. Minha “linha de produção” combina código limpo, visão de negócio e atenção aos detalhes.</p>
+        <div class="timeline">
+          <div><strong>01</strong><span>Briefing como pedido personalizado</span></div>
+          <div><strong>02</strong><span>Protótipo, arquitetura e desenvolvimento</span></div>
+          <div><strong>03</strong><span>Entrega, deploy e suporte evolutivo</span></div>
+        </div>
+      </div>
+      <div class="coupon-box reveal" data-delay="120">
+        <span class="coupon-label">Cupom secreto</span>
+        <h3>CONTRATA10</h3>
+        <p>Insira no checkout para desbloquear uma resposta mais rápida na proposta.</p>
+        <button class="btn ghost" id="copyCoupon" type="button">Copiar cupom</button>
+      </div>
+    </section>
+
+    <section class="section reviews" id="reviews">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Reviews verificados</p>
+        <h2>Clientes e stacks com 5 estrelas.</h2>
+      </div>
+      <div class="review-carousel reveal" aria-live="polite">
+        <div class="review-track" id="reviewTrack">
+          <!-- Reviews renderizados pelo script.js. TROCAR: depoimentos reais. -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section checkout" id="checkout">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Carrinho / Contato</p>
+        <h2>Finalize seu pedido de projeto.</h2>
+        <p>Os itens adicionados viram interesses para uma conversa de contratação.</p>
+      </div>
+      <div class="checkout-layout">
+        <aside class="cart-summary reveal" aria-label="Resumo do carrinho">
+          <h3>Resumo do pedido</h3>
+          <div id="cartItems" class="cart-items empty">Seu carrinho está vazio. Adicione projetos da vitrine.</div>
+          <div class="coupon-input">
+            <label for="couponCode">Cupom</label>
+            <div>
+              <input id="couponCode" type="text" placeholder="CONTRATA10">
+              <button id="applyCoupon" type="button">Aplicar</button>
+            </div>
+            <p id="couponMessage" class="coupon-message"></p>
+          </div>
+        </aside>
+        <form class="contact-form reveal" id="contactForm">
+          <label>Nome
+            <input type="text" name="name" placeholder="Seu nome" required>
+          </label>
+          <label>Email
+            <input type="email" name="email" placeholder="voce@email.com" required>
+          </label>
+          <label>Mensagem
+            <textarea name="message" rows="5" placeholder="Conte rapidamente o que você quer construir" required></textarea>
+          </label>
+          <button class="btn primary" type="submit">Enviar pedido</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <button class="easter-egg" id="easterEgg" type="button" aria-label="Easter egg escondido">?</button>
+
+  <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="modal-card" role="document">
+      <button class="modal-close" type="button" data-close-modal aria-label="Fechar detalhes">×</button>
+      <div id="modalImage" class="modal-image"></div>
+      <p class="eyebrow" id="modalCategory"></p>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <div class="modal-tags" id="modalTags"></div>
+      <div class="modal-actions">
+        <a id="modalRepo" class="btn ghost" href="#" target="_blank" rel="noopener">Repositório</a>
+        <a id="modalDeploy" class="btn primary" href="#" target="_blank" rel="noopener">Deploy</a>
+      </div>
+    </article>
+  </div>
+
+  <footer class="site-footer">
+    <a href="#hero" class="brand"><span class="brand-bag" aria-hidden="true"></span><span>Dev<span>Store</span></span></a>
+    <div class="footer-links">
+      <a href="#produtos">Projetos</a>
+      <a href="#categorias">Skills</a>
+      <a href="#checkout">Contato</a>
+      <!-- TROCAR: links reais das redes sociais -->
+      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p>© <span id="year"></span> DevStore. Portfólio Full Stack em modo e-commerce.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
